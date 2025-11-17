@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Interactive Collection Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Interactive Collection – Demo</h1>
+      <p class="subtitle">Auto-flick + audio preview</p>
+    </header>
+    <main class="app">
+      <header class="top">
+        <h1>Interactive Collection – Demo</h1>
+        <p class="subtitle">Auto-flick + audio preview</p>
+      </header>
+
+      <!-- NEW: builder UI -->
+      <section class="builder">
+        <h2>Create your collection</h2>
+
+        <label for="storyInput">Text (each paragraph = one page)</label>
+        <textarea id="storyInput"
+          placeholder="Write or paste your story/notes here. Leave a blank line between paragraphs to create pages."></textarea>
+
+        <label for="videoInput">Looping video (8-second MP4 recommended)</label>
+        <input id="videoInput" type="file" accept="video/mp4,video/*" />
+
+        <button id="buildBtn">Build pages</button>
+      </section>
+
+      <!-- existing viewer section below -->
+      <section class="viewer">
+        <div id="pageCounter" class="page-counter">Page 1 / 3</div>
+
+        <div id="pageText" class="page-text">
+          <!-- text of current page goes here -->
+        </div>
+
+        <video id="pageVideo" class="page-video" loop muted playsinline></video>
+
+        <div class="controls">
+          <button id="prevBtn">◀ Prev</button>
+          <button id="playBtn">▶ Play narration</button>
+          <button id="nextBtn">Next ▶</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="viewer">
+      <div id="pageCounter" class="page-counter">
+        Page 1 / 3
+      </div>
+
+      <div id="pageText" class="page-text">
+        <!-- text of current page goes here -->
+      </div>
+
+      <video
+        id="pageVideo"
+        class="page-video"
+        loop
+        muted
+        playsinline
+      ></video>
+
+      <div class="controls">
+        <button id="prevBtn">◀ Prev</button>
+        <button id="playBtn">▶ Play narration</button>
+        <button id="nextBtn">Next ▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
